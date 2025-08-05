@@ -207,7 +207,7 @@ export default function Home() {
             Let's Talk <span className="text-blue-400">AI</span>
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Ready to transform your business with AI? Let's discuss how Qminds can help you 
+            Ready to transform your business with AI? Let's discuss how QMinds can help you 
             achieve measurable impact and sustainable growth.
           </p>
           

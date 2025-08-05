@@ -15,7 +15,7 @@ export default function About() {
   const timeline = [
     {
       year: '2023',
-      title: 'Founded Qminds',
+      title: 'Founded QMinds',
       description: 'Established by a visionary with 18+ years in data and AI, driven by passion for transformative technology.'
     },
     {
@@ -92,7 +92,7 @@ export default function About() {
         
         <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
-            About Qminds
+            About QMinds
           </h1>
           <p className="text-xl text-white max-w-5xl mx-auto leading-relaxed">
             We prioritize quality by bringing together a select group of AI and GenAI experts who collaborate closely with business teams. This focused approach ensures tailored, innovative solutions that deliver measurable value to our clients.
@@ -232,7 +232,7 @@ export default function About() {
                 "Quality over quantity—each project delivers measurable ROI and transformative impact. 
                 Our partnerships are built on trust, expertise, and shared vision for the future."
               </blockquote>
-              <div className="text-blue-400 font-semibold">— Qminds Leadership Team</div>
+              <div className="text-blue-400 font-semibold">— QMinds Leadership Team</div>
             </CardContent>
           </Card>
         </div>

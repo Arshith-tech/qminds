@@ -113,11 +113,11 @@ export default function Contact() {
         </div>
         <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
-            Contact Qminds
+            Contact QMinds
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business with AI? Let's discuss your vision and explore 
-            how Qminds can help you achieve measurable results.
+            how QMinds can help you achieve measurable results.
           </p>
         </div>
       </section>
@@ -237,7 +237,7 @@ export default function Contact() {
               {/* Quick Stats */}
               <Card className="bg-gray-800/50 border-gray-700">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Why Choose Qminds?</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Why Choose QMinds?</h3>
                   <div className="space-y-3">
                     <div className="flex justify-between">
                       <span className="text-gray-300">Response Time</span>
@@ -296,7 +296,7 @@ export default function Contact() {
       <section className="py-20 bg-black particle-bg">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow">
-            Connect with the <span className="text-blue-400">Qminds Experts</span>
+            Connect with the <span className="text-blue-400">QMinds Experts</span>
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             Let's shape the future together. Our AI consultants are ready to help you 

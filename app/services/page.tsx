@@ -157,7 +157,7 @@ export default function Services() {
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-glow">
-            Why Choose <span className="text-purple-400">Qminds?</span>
+            Why Choose <span className="text-purple-400">QMinds?</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -181,7 +181,7 @@ export default function Services() {
             Ready to <span className="text-blue-400">Transform</span> Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            Book a consultation with our AI experts and discover how Qminds can help you 
+            Book a consultation with our AI experts and discover how QMinds can help you 
             achieve measurable ROI through strategic AI implementation.
           </p>
           
