@@ -121,14 +121,14 @@ export default function Services() {
 
           {/* Additional Service */}
           <div className="flex justify-center">
-            <Card className="bg-gray-800/50 border-gray-700 hover:border-purple-500 transition-all duration-300 hover:glow-purple group max-w-2xl">
+            <Card className="bg-gray-800/50 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:glow-effect group max-w-2xl">
               <CardHeader>
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${services[4].color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {services[4].icon}
                   </div>
                 </div>
-                <CardTitle className="text-2xl text-white group-hover:text-purple-400 transition-colors duration-300">
+                <CardTitle className="text-2xl text-white group-hover:text-blue-400 transition-colors duration-300">
                   {services[4].title}
                 </CardTitle>
               </CardHeader>

@@ -222,7 +222,7 @@ export default function About() {
             all united by their vision to transform through AI.
           </p>
           
-          <Card className="bg-gray-800/50 border-gray-700 hover:border-purple-500 transition-all duration-300 hover:glow-purple">
+          <Card className="bg-gray-800/50 border-gray-700  transition-all duration-300 ">
             <CardContent className="p-8">
               <TrendingUp className="w-16 h-16 text-purple-400 mx-auto mb-6" />
               <blockquote className="text-xl text-gray-300 italic mb-6 leading-relaxed">
