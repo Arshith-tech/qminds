@@ -131,7 +131,7 @@ export default function Home() {
             {edges.map((edge, index) => (
               <Card 
                 key={index}
-                className="bg-gray-800/50 border-gray-700 hover:border-blue-500 transition-all duration-300 hover:glow-effect group"
+                className="bg-gray-800/50 border-gray-700 hover:border-blue-00 transition-all duration-300 hover:glow-effect group"
               >
                 <CardContent className="p-6 text-center">
                   <div className="text-blue-400 mb-4 group-hover:text-purple-400 transition-colors duration-300">

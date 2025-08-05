@@ -16,6 +16,9 @@ export default function Contact() {
     message: '',
     reason: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -66,10 +69,31 @@ export default function Contact() {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setLoading(true);
+    setSuccess(null);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setSuccess('Message sent! We will get back to you soon.');
+        setFormData({ name: '', email: '', message: '', reason: '' });
+      } else {
+        const data = await res.json();
+        setError(data?.error || 'Failed to send message. Please try again later.');
+      }
+    } catch (err: any) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -83,7 +107,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative py-20 particle-bg overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black" />
-        
+
         <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
             Contact <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Qminds</span>
@@ -116,6 +140,7 @@ export default function Contact() {
                       onChange={(e) => handleInputChange('name', e.target.value)}
                       className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
                       required
+                      disabled={loading}
                     />
                   </div>
                   
@@ -127,11 +152,16 @@ export default function Contact() {
                       onChange={(e) => handleInputChange('email', e.target.value)}
                       className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
                       required
+                      disabled={loading}
                     />
                   </div>
                   
                   <div>
-                    <Select value={formData.reason} onValueChange={(value) => handleInputChange('reason', value)}>
+                    <Select
+                      value={formData.reason}
+                      onValueChange={(value) => handleInputChange('reason', value)}
+                      disabled={loading}
+                    >
                       <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
                         <SelectValue placeholder="Reason for Contact" />
                       </SelectTrigger>
@@ -153,15 +183,24 @@ export default function Contact() {
                       rows={5}
                       className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 resize-none"
                       required
+                      disabled={loading}
                     />
                   </div>
+
+                  {success && (
+                    <div className="text-green-400 text-center">{success}</div>
+                  )}
+                  {error && (
+                    <div className="text-red-400 text-center">{error}</div>
+                  )}
                   
                   <Button 
                     type="submit"
                     size="lg"
+                    disabled={loading}
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white glow-effect hover:animate-pulse-glow transition-all duration-300"
                   >
-                    Send Message <Send className="ml-2 w-5 h-5" />
+                    {loading ? 'Sending...' : <>Send Message <Send className="ml-2 w-5 h-5" /></>}
                   </Button>
                 </form>
               </CardContent>
@@ -222,7 +261,6 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-glow">
             Our <span className="text-purple-400">Global Presence</span>
           </h2>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {offices.map((office, index) => (
               <Card 

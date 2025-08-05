@@ -30,31 +30,31 @@ export default function About() {
   ];
 
   const values = [
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: 'Excellence',
-      description: 'Committed to delivering world-class AI solutions that exceed expectations.',
-      color: 'from-blue-600 to-blue-800'
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: 'Client-Centricity',
-      description: 'Your success is our priority. We build lasting partnerships through trust and results.',
-      color: 'from-purple-600 to-purple-800'
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Trustworthy AI',
-      description: 'Ethical AI development with transparency, fairness, and responsible innovation.',
-      color: 'from-indigo-600 to-indigo-800'
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: 'Continuous Innovation',
-      description: 'Always pushing boundaries, exploring new possibilities in AI and GenAI.',
-      color: 'from-cyan-600 to-cyan-800'
-    }
-  ];
+  {
+    icon: <Award className="w-8 h-8" />,
+    title: 'Strategic Impact',
+    description: 'Empowering businesses to transform GenAI ideas into real, scalable value through actionable roadmaps and proven expertise.',
+    color: 'from-blue-600 to-blue-800'
+  },
+  {
+    icon: <Heart className="w-8 h-8" />,
+    title: 'Client Partnership',
+    description: 'Your goals drive our mission. We collaborate closely to deliver measurable ROI and sustainable success in every engagement.',
+    color: 'from-purple-600 to-purple-800'
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: 'Responsible Innovation',
+    description: 'We champion ethical, transparent, and accountable AI solutions, building trust through fairness and integrity.',
+    color: 'from-indigo-600 to-indigo-800'
+  },
+  {
+    icon: <Lightbulb className="w-8 h-8" />,
+    title: 'Practical Innovation',
+    description: 'Blending advanced GenAI research with pragmatic execution to accelerate adoption and democratize AI for all.',
+    color: 'from-cyan-600 to-cyan-800'
+  }
+];
 
   const teamMembers = [
     {
@@ -91,9 +91,8 @@ export default function About() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
             About <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Qminds</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transforming businesses through AI innovation, strategic thinking, and measurable impact. 
-            We believe AI is not just technology—it's a transformative mindset.
+          <p className="text-xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
+            We believe in quality over quantity. Our approach is anchored in bringing a select group of bright minds to the table—experts who excel in AI and GenAI skills and work hand-in-hand with business teams to address challenges and deliver innovative, practical solutions. This commitment to excellence ensures that every project we undertake is tailored, impactful, and drives measurable value for our clients.
           </p>
         </div>
       </section>
