@@ -60,7 +60,7 @@ export default function Contact() {
     {
       icon: <Phone className="w-6 h-6" />,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+1 (469) 984-4414',
       href: 'tel:+15551234567'
     },
     {
