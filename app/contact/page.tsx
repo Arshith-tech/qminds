@@ -1,12 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { MapPin, Mail, Phone, Linkedin, Send, Globe } from 'lucide-react';
+import { MapPin, Mail, Phone, Linkedin, Send, Globe, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import Link from 'next/link';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import DarkVeil from '@/components/ui/DarkVeil';
 
 export default function Contact() {
   const [mounted, setMounted] = useState(false);
@@ -52,8 +54,8 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       label: 'Email',
-      value: 'hello@qminds.ai',
-      href: 'mailto:hello@qminds.ai'
+      value: 'lokchok.cl@gmail.com',
+      href: 'mailto:lokchok.cl@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -106,11 +108,12 @@ export default function Contact() {
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative py-20 particle-bg overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black" />
-
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <DarkVeil />
+        </div>
         <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
-            Contact <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Qminds</span>
+            Contact Qminds
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business with AI? Let's discuss your vision and explore 
@@ -217,6 +220,7 @@ export default function Contact() {
                   <a
                     key={index}
                     href={option.href}
+                    target='_blank'
                     className="flex items-center space-x-4 p-6 bg-gray-800/30 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:glow-effect group"
                   >
                     <div className="text-blue-400 group-hover:text-purple-400 transition-colors duration-300">
@@ -305,9 +309,9 @@ export default function Contact() {
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-full glow-effect hover:animate-pulse-glow transition-all duration-300"
             >
-              <a href="mailto:hello@qminds.ai">
-                Start Your AI Journey <Send className="ml-2 w-5 h-5" />
-              </a>
+              <Link href="/contact">
+              Start Your AI Journey <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
             </Button>
           </div>
         </div>

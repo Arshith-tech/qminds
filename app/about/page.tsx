@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Users, Target, Eye, Award, Heart, Shield, Lightbulb, TrendingUp } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import DarkVeil from '@/components/ui/DarkVeil';
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
@@ -14,7 +15,7 @@ export default function About() {
   const timeline = [
     {
       year: '2023',
-      title: 'Qminds Founded',
+      title: 'Founded Qminds',
       description: 'Established by a visionary with 18+ years in data and AI, driven by passion for transformative technology.'
     },
     {
@@ -85,14 +86,16 @@ export default function About() {
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative py-20 particle-bg overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black" />
+        <div className="absolute inset-0 z-0 pointer-events-none">
+                  <DarkVeil />
+                </div>
         
         <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
-            About <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Qminds</span>
+            About Qminds
           </h1>
-          <p className="text-xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            We believe in quality over quantity. Our approach is anchored in bringing a select group of bright minds to the table—experts who excel in AI and GenAI skills and work hand-in-hand with business teams to address challenges and deliver innovative, practical solutions. This commitment to excellence ensures that every project we undertake is tailored, impactful, and drives measurable value for our clients.
+          <p className="text-xl text-white max-w-5xl mx-auto leading-relaxed">
+            We prioritize quality by bringing together a select group of AI and GenAI experts who collaborate closely with business teams. This focused approach ensures tailored, innovative solutions that deliver measurable value to our clients.
           </p>
         </div>
       </section>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight, Brain, Cpu, Database, Users, Cloud, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import DarkVeil from '@/components/ui/DarkVeil';
 
 export default function Services() {
   const [mounted, setMounted] = useState(false);
@@ -66,13 +67,15 @@ export default function Services() {
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="relative py-20 particle-bg overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black" />
+        <div className="absolute inset-0 z-0 pointer-events-none">
+                  <DarkVeil />
+                </div>
         
         <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-glow">
-            Our <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Services</span>
+            Our Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Comprehensive AI and GenAI solutions designed to transform your business operations 
             and drive measurable growth through cutting-edge technology.
           </p>
